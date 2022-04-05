@@ -41,7 +41,7 @@ Route::post('/sakila/infofiltro2', [ConsultaController::class, 'infoconsult2']);
 Route::get('/sakila/subirarchivos', [DescargaController::class, 'createform'])->middleware(['auth'])->name('saki.files');
 Route::post('/sakila/descarh', [DescargaController::class, 'download'])->name('saki.archivos');
 Route::get('/sakila/descargarchivos', [DescargaController::class, 'directa'])->middleware(['auth'])->name('saki.descargadirecta');
-Route::get('/sakila/descarga/{{archivo}}', [DescargaController::class, 'upload'])->middleware(['auth']);
+Route::get('/sakila/descarga/{archivo}', [DescargaController::class, 'upload'])->name('saki.ya');
 
 
 

@@ -11,7 +11,7 @@
             <div class="p-6 bg-white border-b border-gray-200">
                 <p>{{$archivo->nombrearchivo}}</p>
                 <p>{{$archivo->archivo_path}}</p>
-                <a href="/sakila/descarga/{{$archivo->nombrearchivo}}">Descargar</a>
+                <a href="{{route('saki.ya', $archivo)}}">Descargar</a>
             </div>
         </div>
     </div>

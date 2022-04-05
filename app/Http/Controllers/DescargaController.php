@@ -14,7 +14,7 @@ class DescargaController extends Controller
 
     public function download(Request $request){
         $request->validate([
-            'file' => 'required|mimes:png,jpg,jfif,org,csv,txt,xlx,xls,pdf|max:2048'
+            'file' => 'required|mimes:png,jpg,jfif,org,csv,txt,xlx,xls,pdf|max:8092'
             ]);
             $fileModel = new archivo;
             if($request->file()) {
@@ -37,9 +37,9 @@ class DescargaController extends Controller
 
        public function upload(archivo $archivo){
             $archivob = public_path().$archivo->archivo_path;
-            $headers = ['Content-Type: images/jpeg'];
+            $headers = ['Content-Type: image/jpeg'];
             if(file_exists($archivob)){
-                return response()->dowload($archivob, $archivo->nombrearchivo, $headers);
+                return response()->download($archivob, $archivo->nombrearchivo, $headers);
             } else{
                 echo('No se ha encontrado el archivo');
             }
