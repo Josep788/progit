@@ -18,26 +18,31 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+
+            h1, h2, h3{
+                text-align: center;
+            }
         </style>
     </head>
     <h1>Actores y peliculas</h1>
-    <h4>Creado por SAKILA</h4>
+    <h3>Bienvenido a nuestra web</h3>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             <img src="../../Imagenes/HD.jpg" alt="fondo de inicio">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                        <a style="background-color: white; box-shadow: 2px 2px 5px; border-radius: 5px; padding:5px; color:blue;" href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500">Entrar</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Iniciar session</a>
+                        <a style="background-color: white; box-shadow: 2px 2px 5px; border-radius: 5px; padding:5px; color:blue;" href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500">Iniciar session</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Registrarse</a>
+                            <a style="background-color: white; box-shadow: 2px 2px 5px; border-radius: 5px; padding:5px; color:blue;" href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500">Registrarse</a>
                         @endif
                     @endauth
                 </div>
             @endif
         </div>
+        <h2>SAKILA</h2>
     </body>
 </html>
