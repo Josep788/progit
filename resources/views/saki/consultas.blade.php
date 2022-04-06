@@ -8,7 +8,6 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <a style="background-color: white; box-shadow: 2px 2px 5px; border-radius: 5px; padding:5px; color:blue;" href="">Filtrar información</a>
                     <canvas id="myChart"></canvas>
                 </div>
             </div>
