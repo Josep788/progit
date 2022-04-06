@@ -5,6 +5,7 @@ use App\Http\Controllers\ActorController;
 use App\Http\Controllers\FilmController;
 use App\Http\Controllers\ConsultaController;
 use App\Http\Controllers\DescargaController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
