@@ -46,8 +46,13 @@ Route::get('/sakila/descarga/{archivo}', [DescargaController::class, 'upload'])-
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
+Route::group(['middlware'=>'auth'], function(){
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+    Route::view('profile', 'profile')->name('profile');
+    Route::put('profile', [ProfileController::class, 'updateduser'])->name('profile.updateduser');
+    });
+    
+    require __DIR__.'/auth.php';
+    
