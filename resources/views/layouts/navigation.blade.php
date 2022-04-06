@@ -85,7 +85,25 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('Inicio') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('saki.listaractores')" :active="request()->routeIs('saki.listaractores')">
+                {{ __('Listado de actores') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('saki.crearactores')" :active="request()->routeIs('saki.crearactores')">
+                {{ __('Nuevos actores') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('saki.listarpelis')" :active="request()->routeIs('saki.listarpelis')">
+                {{ __('Listado de peliculas') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('saki.crearpelis')" :active="request()->routeIs('saki.crearpelis')">
+                {{ __('Nuevas peliculas') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('saki.consultas')" :active="request()->routeIs('saki.consultas')">
+                {{ __('Consultas sobre sakila') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('saki.files')" :active="request()->routeIs('saki.files')">
+                {{ __('Subir archivos') }}
             </x-responsive-nav-link>
         </div>
 
